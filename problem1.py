@@ -1,5 +1,10 @@
 import sympy as sp
 
-### Replace with your own code (begin) ###
-pass
-### Replace with your own code (end) ###
+x, y, r = sp.symbols('x y r')
+
+eq1 = sp.Eq(2*x**2 + 3*y**2, r)
+eq2 = sp.Eq(y, 2*x + 1)
+
+sol = sp.solve([eq1, eq2], [x, y], dict=True)
+sol
+
